@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "Gregor Woiwode <gregor.woiwode@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^0.8.2",
+    "webpack": "^1.13.2"
+  }
 }
