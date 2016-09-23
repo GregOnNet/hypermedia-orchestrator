@@ -1,0 +1,21 @@
+var webpack = require('webpack');
+
+module.exports = {
+  entry: './src/hypermedia-flow.ts',
+  output: {
+    path: './dist',
+    filename: 'hypermedia.min.js'
+  },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '!.test.ts', '.js']
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin()
+  ],
+  module: {
+    loaders: [
+      { test: /\.ts$/, loader: 'ts-loader' }
+    ]
+  }
+}
