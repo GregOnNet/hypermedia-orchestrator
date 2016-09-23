@@ -8,14 +8,18 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '!.test.ts', '.js']
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin()
   ],
   module: {
     loaders: [
-      { test: /\.ts$/, loader: 'ts-loader' }
+      {
+        test: /\.ts$/,
+        exclude: [/\.spec\.ts$/],
+        loader: 'awesome-typescript-loader'
+      }
     ]
   }
 }
