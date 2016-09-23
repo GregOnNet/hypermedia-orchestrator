@@ -1,11 +1,12 @@
 import { expect } from 'chai';
+import { Api } from './hypermedia-flow';
 
-describe('Add', () => {
-  it('add 1 to 1', () => {
-    expect(1 + 1).eq(2);
-  });
+describe('Instantiate Api', () => {
+  let api: Api;
 
-  it('add 1 to 1', () => {
-    expect(1 + 1).eq(2);
+  beforeEach(() => api = new Api());
+
+  it('receives Hi', () => {
+    expect(api.greet()).eq('Hi');
   });
 });
